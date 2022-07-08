@@ -107,12 +107,9 @@ class BoardViewController: UIViewController {
     }
 
     
-    @IBAction func didTextFieldEndOnExit(_ sender: Any) {
-        print("이벤트 확인")
-    }
-    
-    
-
+    @IBAction func didTextFieldEndOnExit(_ sender: UITextField) {
+        print("return 버튼 확인")
+    }        
 }
 
 
@@ -123,8 +120,8 @@ extension BoardViewController: UITextFieldDelegate {
            self.view.endEditing(true)
        }
        
-       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-           textField.resignFirstResponder() // TextField 비활성화
-           return true
-       }
+//       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//           textField.resignFirstResponder() // TextField 비활성화
+//           return true
+//       }
 }
